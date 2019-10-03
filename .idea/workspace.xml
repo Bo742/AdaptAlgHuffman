@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2489cdd5-e0e6-4e41-89df-86de69de59d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/BinaryTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/AdaptAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AdaptAlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BinaryTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +27,8 @@
   <component name="ProjectId" id="1RbCsGRl96JDlzzPHAc7ytoLWB8" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

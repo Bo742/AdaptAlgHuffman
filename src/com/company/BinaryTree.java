@@ -7,6 +7,8 @@ public class BinaryTree {
     private String code;
     private int count;
     private int numberParent;
+    private int itsLeftCHild=0;
+    private int itsRightChild=0;
 
     public BinaryTree(){
         leftChild=null;
@@ -69,5 +71,21 @@ public class BinaryTree {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public int getItsLeftCHild() {
+        return itsLeftCHild;
+    }
+
+    public void setItsLeftCHild(int itsLeftCHild) {
+        this.itsLeftCHild = itsLeftCHild;
+    }
+
+    public int getItsRightChild() {
+        return itsRightChild;
+    }
+
+    public void setItsRightChild(int itsRightChild) {
+        this.itsRightChild = itsRightChild;
     }
 }
