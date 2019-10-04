@@ -2,11 +2,11 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class AdaptAlg {
+public class AdaptAlgCode {
     private ArrayList<BinaryTree> masBinaryTree = new ArrayList<>();
     private String answer="";
 
-    public AdaptAlg(String str){
+    public AdaptAlgCode(String str){
         createSpecialSymbol();
         String[] strSymbols = str.split("");
         createFirstBinaryTree(strSymbols[0]);
@@ -16,21 +16,14 @@ public class AdaptAlg {
 
         for (int i = 1; i <strSymbols.length ; i++) {
             codeAlg(strSymbols[i]);
-            System.out.println("_____________________________________________________________________________");
-            for (int j = 0; j <masBinaryTree.size() ; j++) {
-                System.out.printf("%3d | %3s | %3d | %3d | %3d \n",masBinaryTree.get(j).getCount(),masBinaryTree.get(j).getSymbol(),masBinaryTree.get(j).getNumberParent(),masBinaryTree.get(j).getItsLeftCHild(),masBinaryTree.get(j).getItsRightChild());
-            }
         }
-        System.out.println("_____________________________________________________________________________");
-        for (int i = 0; i <masBinaryTree.size() ; i++) {
-            System.out.printf("%3d | %3s | %3d | %30s \n",masBinaryTree.get(i).getCount(),masBinaryTree.get(i).getSymbol(),masBinaryTree.get(i).getNumberParent(),masBinaryTree.get(i).getCode());
-        }
-        System.out.println(answer);
 
+    }
+    public String getAnswer(){
+        return answer;
     }
 
     public void codeAlg(String symbol){
-
         int flag=0;
         for (int i = 0; i <masBinaryTree.size() ; i++) {
             if(masBinaryTree.get(i).getSymbol().equals(symbol)){
@@ -71,7 +64,6 @@ public class AdaptAlg {
             masBinaryTree.get(i).changeCount();
         }
     }
-
 
     public void sortBinaryTree(){
         for (int i = masBinaryTree.size()-1; i >=1 ; i--) {
@@ -127,8 +119,6 @@ public class AdaptAlg {
                 }
             }
         }
-
-
     }
 
     public void checkOrder(){
@@ -169,7 +159,6 @@ public class AdaptAlg {
                                 if (masBinaryTree.get(j).getItsRightChild() == 1) {
                                     masBinaryTree.get(masBinaryTree.get(j).getNumberParent()).setRightChild(masBinaryTree.get(j));
                                 }
-
 
                                 toSwap(j, k);
                             }
@@ -229,6 +218,11 @@ public class AdaptAlg {
     public void createFirstTimeSymbol(String symbol){
         int ch = symbol.charAt(0);
         String code = Integer.toString(ch,2);
+        if(code.length()<8){
+            for (int i = code.length(); i < 8; i++) {
+                code="0"+code;
+            }
+        }
 
         answer=answer+masBinaryTree.get(masBinaryTree.size()-1).getCode()+code;
 
@@ -254,6 +248,11 @@ public class AdaptAlg {
     public void createFirstBinaryTree(String symbol){
         int ch = symbol.charAt(0);
         String code = Integer.toString(ch,2);
+        if(code.length()<8){
+            for (int i = code.length(); i <8 ; i++) {
+                code="0"+code;
+            }
+        }
         answer=answer+masBinaryTree.get(masBinaryTree.size()-1).getCode()+code;
 
         masBinaryTree.add(new BinaryTree());
