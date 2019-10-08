@@ -7,43 +7,109 @@ public class AdaptAlgDecode {
     private String answer = "";
     private String codeString = "";
 
-    public AdaptAlgDecode(String codeString){
+    public AdaptAlgDecode(String codeString,int amountSymbol){
         createSpecialSymbol();
         this.codeString=codeString;
         getFirstSymbol();
         createFirstBinaryTree(answer);
         sortBinaryTree();
         changeCount();
+        checkOrder();
+        changeCount();
         updateCode();
-        while (codeString.length()>0){
+        for (int i = 0; i < amountSymbol-1 ; i++) {
+            for (int j = 0; j < masBinaryTree.size() ; j++) {
+                System.out.printf("%3d | %3s | %3s \n" , masBinaryTree.get(j).getCount(),masBinaryTree.get(j).getSymbol(),masBinaryTree.get(j).getCode());
+
+            }
+            System.out.println();
+            System.out.println(answer);
+            System.out.println(this.codeString);
+            System.out.println();
             decodeAlg();
         }
+        for (int j = 0; j < masBinaryTree.size() ; j++) {
+            System.out.printf("%3d | %3s | %3s \n" , masBinaryTree.get(j).getCount(),masBinaryTree.get(j).getSymbol(),masBinaryTree.get(j).getCode());
 
+        }
+        System.out.println();
     }
 
     public void decodeAlg(){
         int lengthSpecialSymbol = masBinaryTree.get(masBinaryTree.size()-1).getCode().length();
         String[] strSymbol = codeString.split("");
         String strSpecial = "";
+        String symbolCode = "";
         for (int i = 0; i < lengthSpecialSymbol ; i++) {
             strSpecial=strSpecial+strSymbol[i];
         }
         codeString="";
         if (strSpecial.equals(masBinaryTree.get(masBinaryTree.size()-1).getCode())){
-            codeString="";
             for (int i = lengthSpecialSymbol; i < strSymbol.length; i++) {
                 codeString = codeString + strSymbol[i];
             }
             getFirstSymbol();
             String[] str = answer.split("");
-            createFirstBinaryTree(str[str.length-1]);
+            createFirstTimeSymbol(str[str.length-1]);
             sortBinaryTree();
             changeCount();
+            checkOrder();
+            changeCount();
+            sortBinaryTree();
             updateCode();
         }
         else {
+            int flag = 0;
+            for (int j = 0; j < strSymbol.length ; j++) {
+                if(flag == 0){
+                    symbolCode = symbolCode + strSymbol[j];
+                    for (int i = 0; i < masBinaryTree.size() ; i++) {
+                        if(masBinaryTree.get(i).getCode().equals(symbolCode) && !masBinaryTree.get(i).getSymbol().equals("")){
+                            flag = i;
+                            break;
+                        }
+                    }
+                }
+
+            }
+            for (int i = symbolCode.length(); i < strSymbol.length ; i++) {
+                codeString = codeString + strSymbol[i];
+            }
+            updateSymbol(flag);
+            flag=0;
+            sortBinaryTree();
+            changeCount();
+            checkOrder();
+            changeCount();
+            sortBinaryTree();
+            updateCode();
 
         }
+    }
+
+    public void updateSymbol(int i){
+        masBinaryTree.get(i).upCount();
+        answer=answer+masBinaryTree.get(i).getSymbol();
+    }
+
+    public void createFirstTimeSymbol(String symbol){
+        masBinaryTree.add(new BinaryTree());
+        masBinaryTree.get(masBinaryTree.size()-1).setCount(1);
+        masBinaryTree.get(masBinaryTree.size()-1).setSymbol(symbol);
+
+        masBinaryTree.add(new BinaryTree());
+        masBinaryTree.get(masBinaryTree.get(masBinaryTree.size()-3).getNumberParent()).setRightChild(masBinaryTree.get(masBinaryTree.size()-1));
+        masBinaryTree.get(masBinaryTree.size()-1).setNumberParent(masBinaryTree.get(masBinaryTree.size()-3).getNumberParent());
+        masBinaryTree.get(masBinaryTree.size()-1).setLeftChild(masBinaryTree.get(masBinaryTree.size()-2));
+        masBinaryTree.get(masBinaryTree.size()-1).setRightChild(masBinaryTree.get(masBinaryTree.size()-3));
+        masBinaryTree.get(masBinaryTree.size()-1).changeCount();
+        masBinaryTree.get(masBinaryTree.size()-1).getLeftChild().setNumberParent(masBinaryTree.size()-1);
+        masBinaryTree.get(masBinaryTree.size()-1).getLeftChild().setItsLeftCHild(1);
+        masBinaryTree.get(masBinaryTree.size()-1).getRightChild().setNumberParent(masBinaryTree.size()-1);
+        masBinaryTree.get(masBinaryTree.size()-1).getRightChild().setItsRightChild(1);
+        masBinaryTree.get(masBinaryTree.size()-1).setSymbol("");
+        masBinaryTree.get(masBinaryTree.size()-1).setItsRightChild(1);
+        masBinaryTree.get(masBinaryTree.size()-1).setCode("");
     }
 
     public void updateCode(){
@@ -74,6 +140,7 @@ public class AdaptAlgDecode {
         masBinaryTree.get(masBinaryTree.size()-1).setCode("");
         masBinaryTree.get(masBinaryTree.size()-1).setNumberParent(-1);
     }
+
     public void getFirstSymbol(){
 
         String[] strSymbol = codeString.split("");

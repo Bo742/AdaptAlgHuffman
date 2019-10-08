@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2489cdd5-e0e6-4e41-89df-86de69de59d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgDecode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgDecode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AdaptAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AdaptAlgCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,8 +90,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="6" />
+          <line>19</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

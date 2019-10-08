@@ -9,7 +9,7 @@ public class Main {
         String str = in.nextLine();
         AdaptAlgCode algCode = new AdaptAlgCode(str);
         System.out.println(algCode.getAnswer());
-        //AdaptAlgDecode algDecode = new AdaptAlgDecode(algCode.getAnswer());
-        //System.out.println(algDecode.getAnswer());
+        AdaptAlgDecode algDecode = new AdaptAlgDecode(algCode.getAnswer(),str.length());
+        System.out.println(algDecode.getAnswer());
     }
 }
