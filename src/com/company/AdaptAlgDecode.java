@@ -12,27 +12,11 @@ public class AdaptAlgDecode {
         this.codeString=codeString;
         getFirstSymbol();
         createFirstBinaryTree(answer);
-        sortBinaryTree();
-        changeCount();
         checkOrder();
-        changeCount();
         updateCode();
         for (int i = 0; i < amountSymbol-1 ; i++) {
-            for (int j = 0; j < masBinaryTree.size() ; j++) {
-                System.out.printf("%3d | %3s | %3s \n" , masBinaryTree.get(j).getCount(),masBinaryTree.get(j).getSymbol(),masBinaryTree.get(j).getCode());
-
-            }
-            System.out.println();
-            System.out.println(answer);
-            System.out.println(this.codeString);
-            System.out.println();
             decodeAlg();
         }
-        for (int j = 0; j < masBinaryTree.size() ; j++) {
-            System.out.printf("%3d | %3s | %3s \n" , masBinaryTree.get(j).getCount(),masBinaryTree.get(j).getSymbol(),masBinaryTree.get(j).getCode());
-
-        }
-        System.out.println();
     }
 
     public void decodeAlg(){
@@ -40,8 +24,10 @@ public class AdaptAlgDecode {
         String[] strSymbol = codeString.split("");
         String strSpecial = "";
         String symbolCode = "";
-        for (int i = 0; i < lengthSpecialSymbol ; i++) {
-            strSpecial=strSpecial+strSymbol[i];
+        if(lengthSpecialSymbol<strSymbol.length){
+            for (int i = 0; i < lengthSpecialSymbol ; i++) {
+                strSpecial=strSpecial+strSymbol[i];
+            }
         }
         codeString="";
         if (strSpecial.equals(masBinaryTree.get(masBinaryTree.size()-1).getCode())){
@@ -51,11 +37,7 @@ public class AdaptAlgDecode {
             getFirstSymbol();
             String[] str = answer.split("");
             createFirstTimeSymbol(str[str.length-1]);
-            sortBinaryTree();
-            changeCount();
             checkOrder();
-            changeCount();
-            sortBinaryTree();
             updateCode();
         }
         else {
@@ -77,11 +59,7 @@ public class AdaptAlgDecode {
             }
             updateSymbol(flag);
             flag=0;
-            sortBinaryTree();
-            changeCount();
             checkOrder();
-            changeCount();
-            sortBinaryTree();
             updateCode();
 
         }

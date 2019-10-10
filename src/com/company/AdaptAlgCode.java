@@ -33,9 +33,7 @@ public class AdaptAlgCode {
         }
         if(flag==0){
             createFirstTimeSymbol(symbol);
-            changeCount();
             checkOrder();
-            changeCount();
             sortBinaryTree();
             updateCode();
         }
