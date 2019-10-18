@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2489cdd5-e0e6-4e41-89df-86de69de59d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgDecode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/AdaptAlgDecode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdaptAlgHuffman/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AdaptAlgCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AdaptAlgCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/AdaptAlgDecode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +24,7 @@
   <component name="ProjectId" id="1RbCsGRl96JDlzzPHAc7ytoLWB8" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GameCityWithInfo" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
